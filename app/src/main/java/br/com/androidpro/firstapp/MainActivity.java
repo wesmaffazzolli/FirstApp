@@ -30,8 +30,14 @@ public class MainActivity extends AppCompatActivity {
             int n1 = Integer.parseInt(num1.getText().toString());
             int n2 = Integer.parseInt(num2.getText().toString());
 
-            //Soma e escreve na interface o resultado
-            out.setText(String.valueOf(n1+n2));
+            if(view.getId() == R.id.bSum) {
+                //Soma e escreve na interface o resultado
+                out.setText(String.valueOf(n1+n2));
+            } else {
+                //Subtrai e escreve na interface o resultado
+                out.setText(String.valueOf(n1-n2));
+            }
+
         } else {
             Toast msg = Toast.makeText(this, "Não deixe os campos de entradas vazios.", Toast.LENGTH_SHORT);
             msg.show();

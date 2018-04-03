@@ -18,11 +18,13 @@
         android:inputType="number" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bSum"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/num1"
-        android:layout_centerHorizontal="true"
+        android:layout_alignEnd="@+id/num1"
+        android:layout_below="@+id/num1"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="22dp"
         android:onClick="sum"
         android:text="+" />
 
@@ -30,9 +32,10 @@
         android:id="@+id/num2"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="15dp"
+        android:layout_alignBaseline="@+id/num1"
+        android:layout_alignBottom="@+id/num1"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/output"
         android:ems="10"
         android:inputType="number" />
 
@@ -40,9 +43,20 @@
         android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/bSub"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <Button
+        android:id="@+id/bSub"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bSum"
+        android:layout_alignBottom="@+id/bSum"
+        android:layout_alignStart="@+id/num2"
+        android:layout_marginStart="34dp"
+        android:onClick="sum"
+        android:text="-" />
 </android.widget.RelativeLayout>
